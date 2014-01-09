@@ -1,5 +1,5 @@
 if typeof require is 'function'
-  $ = require '../vendor/jquery'
+  $ = require 'jquery'
   _ = require 'underscore-plus'
 else
   {$, _} = window
