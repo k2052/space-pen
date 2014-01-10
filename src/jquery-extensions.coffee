@@ -1,8 +1,10 @@
-if typeof require is 'function'
+if window
+  {$, _} = window
+else if typeof require is 'function'
   $ = require 'jquery'
   _ = require 'underscore-plus'
 else
-  {$, _} = window
+  throw new Error("Space Pen Couldn't Load jQuery")
 
 $.fn.scrollBottom = (newValue) ->
   if newValue?
