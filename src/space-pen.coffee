@@ -99,7 +99,7 @@ class View extends jQuery
           element = $(element)
           element.on eventName, (event) -> view[methodName](event, element)
 
-      if view[0].webkitMatchesSelector(selector)
+      if view.is(selector)
         methodName = view[0].getAttribute(eventName)
         do (methodName) ->
           view.on eventName, (event) -> view[methodName](event, view)
